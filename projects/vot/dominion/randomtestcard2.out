@@ -1,3 +1,219 @@
+Now Randomly Testing isGameOver():
+
+Random NUM is: 3
+Test failed, game started correctly
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 5
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 3
+Test failed, game started correctly
+Random NUM is: 5
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 9
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 1
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 9
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 3
+Test failed, game started correctly
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 1
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 8
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 9
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 3
+Test failed, game started correctly
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 5
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 9
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 8
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 9
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 3
+Test failed, game started correctly
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 1
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 9
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 3
+Test failed, game started correctly
+Random NUM is: 1
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 9
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 4
+Test failed, game started correctly
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 8
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 4
+Test failed, game started correctly
+Random NUM is: 5
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 3
+Test failed, game started correctly
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 1
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 3
+Test failed, game started correctly
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 1
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 5
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 5
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 4
+Test failed, game started correctly
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 5
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 9
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 3
+Test failed, game started correctly
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 4
+Test failed, game started correctly
+Random NUM is: 5
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 5
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 4
+Test failed, game started correctly
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 4
+Test failed, game started correctly
+Random NUM is: 4
+Test failed, game started correctly
+Random NUM is: 3
+Test failed, game started correctly
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 8
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 8
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 8
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 4
+Test failed, game started correctly
+Random NUM is: 3
+Test failed, game started correctly
+Random NUM is: 1
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 4
+Test failed, game started correctly
+Random NUM is: 9
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 8
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 9
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 6
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 4
+Test failed, game started correctly
+Random NUM is: 9
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 5
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 4
+Test failed, game started correctly
+Random NUM is: 8
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 1
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+Random NUM is: 2
+Test failed, game started correctly
+Random NUM is: 7
+Test passed, number of Player is 1 or greater than 4. No Game
+
+TEST SUCCESSFULLY COMPLETED
+
+File 'randomtestcard2.c'
+Lines executed:94.44% of 18
+Creating 'randomtestcard2.c.gcov'
+
+File 'dominion.c'
+Lines executed:17.02% of 570
+Branches executed:16.31% of 417
+Taken at least once:14.63% of 417
+Calls executed:7.00% of 100
+Creating 'dominion.c.gcov'
+
         -:    0:Source:dominion.c
         -:    0:Graph:dominion.gcno
         -:    0:Data:dominion.gcda

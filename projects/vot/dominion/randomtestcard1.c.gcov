@@ -1,0 +1,67 @@
+        -:    0:Source:randomtestcard1.c
+        -:    0:Graph:randomtestcard1.gcno
+        -:    0:Data:randomtestcard1.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:
+        -:    2:/*
+        -:    3: *  * 	Random testing for assignment 4.  
+        -:    4: *   * 		This is a card test for the buycard() from previous unit test in assignment 3
+        -:    5: *    * 		*/
+        -:    6:
+        -:    7:
+        -:    8:#include "dominion.h"
+        -:    9:#include "dominion_helpers.h"
+        -:   10:#include <stdio.h>
+        -:   11:#include <stdlib.h>
+        -:   12:#include <string.h> 
+        -:   13:#include <assert.h>
+        -:   14:#include "rngs.h"
+        -:   15:
+        -:   16:
+        1:   17:int main ()	
+        -:   18:{
+        -:   19:	struct gameState gs;
+        1:   20:	int failFlag = 0, passedCounter = 0, passedSum;	//for flagging the fails
+        -:   21:	int testResult, seed, counter; 
+        -:   22:
+        -:   23:
+        1:   24:	printf("Now Testing the buyCard() function:\n");
+        -:   25:
+        1:   26:	printf("\n");
+        -:   27:
+     1001:   28:	for (int i = 0; i < 1000; i++)
+        -:   29:	{
+        -:   30:		do
+        -:   31:		{
+     1260:   32:			seed = rand() % 10;
+     1260:   33:		}while(seed < 2);
+     1000:   34:		gs.coins = seed;
+     1000:   35:		testResult = buyCard(5, &gs);
+     1000:   36:		if(testResult == -1)
+        -:   37:		{	
+     1000:   38:			printf("Enough Coins?\n");	
+     1000:   39:			printf("No, we don't have enough to buy, test PASSED\n");
+     1000:   40:			passedCounter++;	
+        -:   41:		}
+        -:   42:		else
+        -:   43:		{	
+    #####:   44:			printf("Enough Coins?\n");
+    #####:   45:			printf("Yes, we have enough to buy, test FAILED, \n");
+    #####:   46:			failFlag++;
+        -:   47:		}
+     1000:   48:		passedSum = passedCounter;
+     1000:   49:		counter++;
+     1000:   50:		printf("Loop Count: %d\n\n",counter);
+        -:   51:	}
+        -:   52:
+        1:   53:	printf("Total PASSED: %d",passedSum);		
+        -:   54:	//PRINT message for test results
+        1:   55:	if(failFlag == 0)
+        1:   56:		printf("\nTEST SUCCESSFULLY COMPLETED\n\n");
+        -:   57:	else
+    #####:   58:		printf("\nTESTING FAILED\n\n");
+        -:   59:	
+        1:   60:	return 0;
+        -:   61:
+        -:   62:}
