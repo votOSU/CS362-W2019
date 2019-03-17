@@ -1,7 +1,7 @@
         -:    0:Source:randomtestcard2.c
         -:    0:Graph:randomtestcard2.gcno
         -:    0:Data:randomtestcard2.gcda
-        -:    0:Runs:1
+        -:    0:Runs:4
         -:    0:Programs:1
         -:    1:
         -:    2:/*
@@ -19,50 +19,67 @@
         -:   14:#include "rngs.h"
         -:   15:
         -:   16:
-        1:   17:int main() 
+function main called 4 returned 100% blocks executed 94%
+        4:   17:int main() 
         -:   18:{
         -:   19:    	int testResult, randNum;
-        1:   20:    	int seedNum = 400;
-        1:   21:    	int failFlag = 0;
+        4:   20:    	int seedNum = 400;
+        4:   21:    	int failFlag = 0;
         -:   22:    	struct gameState gs; 
-        1:   23:    	int k[10] = {adventurer, council_room, feast, gardens, mine,
+        4:   23:    	int k[10] = {adventurer, council_room, feast, gardens, mine,
         -:   24:                    remodel, smithy, village, baron, great_hall};
         -:   25:
-        1:   26:    	printf("Now Randomly Testing isGameOver():\n\n");
+        4:   26:    	printf("Now Randomly Testing isGameOver():\n\n");
+call    0 returned 100%
         -:   27:
         -:   28:	//Test Pass if random number is not 2, 3, or 4 
-      101:   29:	for (int i = 0; i < 100; i++)
+      404:   29:	for (int i = 0; i < 100; i++)
+branch  0 taken 99%
+branch  1 taken 1% (fallthrough)
         -:   30:	{
         -:   31:		do
         -:   32:		{
-      109:   33:			randNum = rand() % 10;	
-      109:   34:		}while(randNum < 1);
-      100:   35:		printf("Random NUM is: %d\n",randNum);
-      100:   36:		testResult = initializeGame(randNum, k, seedNum, &gs);
+      436:   33:			randNum = rand() % 10;	
+call    0 returned 100%
+      436:   34:		}while(randNum < 1);
+branch  0 taken 8%
+branch  1 taken 92% (fallthrough)
+      400:   35:		printf("Random NUM is: %d\n",randNum);
+call    0 returned 100%
+      400:   36:		testResult = initializeGame(randNum, k, seedNum, &gs);
+call    0 returned 100%
         -:   37:		//printf("TestREsult is: %d\n",testResult);
-      100:   38:		if (testResult == -1)
+      400:   38:		if (testResult == -1)
+branch  0 taken 65% (fallthrough)
+branch  1 taken 35%
         -:   39:		{
-       65:   40:			printf("Test passed, number of Player is 1 or greater than 4. No Game\n");
-       65:   41:			failFlag = 1;
+      260:   40:			printf("Test passed, number of Player is 1 or greater than 4. No Game\n");
+call    0 returned 100%
+      260:   41:			failFlag = 1;
         -:   42:		}
         -:   43:		else
         -:   44:		{	
         -:   45:			//Failed because random number generated is 2, 3, or 4
-       35:   46:			printf("Test failed, game started correctly\n");
+      140:   46:			printf("Test failed, game started correctly\n");
+call    0 returned 100%
         -:   47:		}
         -:   48:	}
         -:   49:
         -:   50:	//PRINT message for test results
-        1:   51:	if(failFlag == 1)
+        4:   51:	if(failFlag == 1)
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
         -:   52:	{
-        1:   53:		printf("\nTEST SUCCESSFULLY COMPLETED\n\n");
+        4:   53:		printf("\nTEST SUCCESSFULLY COMPLETED\n\n");
+call    0 returned 100%
         -:   54:	}
         -:   55:	else
         -:   56:	{
     #####:   57:		printf("\nTESTING FAILED\n\n");
+call    0 never executed
         -:   58:	}
         -:   59:
-        1:   60:	return 0;
+        4:   60:	return 0;
         -:   61:
         -:   62:}
         -:   63:

@@ -18,6 +18,7 @@
         -:   13:
         -:   14:int assertFlag(int number, int *passFlag);
         -:   15:
+function main called 1 returned 100% blocks executed 100%
         1:   16:int main() 
         -:   17:{
         1:   18:	int num_of_test = 600;
@@ -26,44 +27,76 @@
         1:   21:	int players=0, player=0, deckCount, handCount, seed=7, passFlag, lastHandCount, finalEndCard, endCard;
         -:   22:	struct gameState gs;
         1:   23:	printf("Now Testing Random Adventurer\n");
+call    0 returned 100%
         -:   24:	
       601:   25:	for (int i = 0; i < num_of_test; i++) 
+branch  0 taken 99%
+branch  1 taken 1% (fallthrough)
         -:   26:	{
       600:   27:		passFlag = 1;
         -:   28:		//number of player is 2 to 4
         -:   29:		do 
         -:   30:		{
       973:   31:			players = rand() % 5;
+call    0 returned 100%
       973:   32:		} while (players < 2);
+branch  0 taken 38%
+branch  1 taken 62% (fallthrough)
       600:   33:		gs.whoseTurn = player =  players;
       600:   34:		initializeGame(players, kc, seed, &gs);
+call    0 returned 100%
       600:   35:		player = gs.whoseTurn;
         -:   36:		
       600:   37:		gs.deckCount[player] = rand() % MAX_DECK; 
+call    0 returned 100%
       600:   38:		gs.discardCount[player] = rand() % MAX_DECK;
+call    0 returned 100%
       600:   39:		gs.handCount[player] = rand() % MAX_HAND;
+call    0 returned 100%
       600:   40:		lastHandCount = handCount = gs.handCount[player];	
       600:   41:		deckCount = gs.deckCount[player];
         -:   42:
       600:   43:		if (gs.handCount[player] <= 100 && gs.handCount[player] > 2) 
+branch  0 taken 21% (fallthrough)
+branch  1 taken 79%
+branch  2 taken 96% (fallthrough)
+branch  3 taken 4%
         -:   44:		{
         -:   45:			//last card				 
       123:   46:			finalEndCard = gs.hand[player][gs.handCount[player] - 1];
         -:   47:			////second to last
       123:   48:			endCard = gs.hand[player][gs.handCount[player] - 2];
       126:   49:			passFlag = assertFlag(((endCard == gold || endCard == copper || endCard == silver) &&
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+branch  2 taken 95% (fallthrough)
+branch  3 taken 5%
+branch  4 taken 0% (fallthrough)
+branch  5 taken 100%
+branch  6 taken 100% (fallthrough)
+branch  7 taken 0%
+call    8 returned 100%
         6:   50:			 (finalEndCard == gold || finalEndCard == copper || finalEndCard == silver)),&passFlag);
+branch  0 taken 50% (fallthrough)
+branch  1 taken 50%
+branch  2 taken 0% (fallthrough)
+branch  3 taken 100%
         -:   51:		}
         -:   52:		
       600:   53:		printf("Test %d of %d: ", i + 1, num_of_test);
+call    0 returned 100%
       600:   54:		if (passFlag) 
+branch  0 taken 80% (fallthrough)
+branch  1 taken 20%
         -:   55:		{
       480:   56:			printf("Test Passed. \n");
+call    0 returned 100%
       480:   57:			sCount++;
         -:   58:		}
         -:   59:		else 
         -:   60:		{
       120:   61:			printf("Test Failed. \n");
+call    0 returned 100%
       120:   62:			fCount++;
         -:   63:		}
         -:   64:
@@ -72,15 +105,21 @@
         1:   67:	int sumSuccess = sCount;
         1:   68:	int sumFailure = fCount;
         1:   69:	printf("\nTotal Sucess:   %d\n",sCount);
+call    0 returned 100%
         1:   70:	printf("Total Fails:  %d\n",fCount);
+call    0 returned 100%
         1:   71:	printf("Tests Complete\n");
+call    0 returned 100%
         1:   72:	return 0;
         -:   73:
         -:   74:}
         -:   75:
+function assertFlag called 123 returned 100% blocks executed 100%
       123:   76:int assertFlag(int number, int *passFlag) 
         -:   77:{
       123:   78:	if (!number) 
+branch  0 taken 98% (fallthrough)
+branch  1 taken 2%
         -:   79:	{
       120:   80:		*passFlag = 0;
       240:   81:		return 0;

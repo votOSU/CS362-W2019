@@ -1,8 +1,9 @@
         -:    0:Source:randomtestcard1.c
         -:    0:Graph:randomtestcard1.gcno
         -:    0:Data:randomtestcard1.gcda
-        -:    0:Runs:1
+        -:    0:Runs:5
         -:    0:Programs:1
+        -:    0:Source is newer than graph
         -:    1:
         -:    2:/*
         -:    3: *  * 	Random testing for assignment 4.  
@@ -19,49 +20,70 @@
         -:   14:#include "rngs.h"
         -:   15:
         -:   16:
-        1:   17:int main ()	
+function main called 5 returned 100% blocks executed 82%
+        5:   17:int main ()	
         -:   18:{
         -:   19:	struct gameState gs;
-        1:   20:	int failFlag = 0, passedCounter = 0, passedSum;	//for flagging the fails
+        5:   20:	int failFlag = 0, passedCounter = 0, passedSum;	//for flagging the fails
         -:   21:	int testResult, seed, counter; 
         -:   22:
         -:   23:
-        1:   24:	printf("Now Testing the buyCard() function:\n");
+        5:   24:	printf("Now Testing the buyCard() function:\n");
+call    0 returned 100%
         -:   25:
-        1:   26:	printf("\n");
+        5:   26:	printf("\n");
+call    0 returned 100%
         -:   27:
-     1001:   28:	for (int i = 0; i < 1000; i++)
+     5005:   28:	for (int i = 0; i < 1000; i++)
+branch  0 taken 99%
+branch  1 taken 1% (fallthrough)
         -:   29:	{
         -:   30:		do
         -:   31:		{
-     1260:   32:			seed = rand() % 10;
-     1260:   33:		}while(seed < 2);
-     1000:   34:		gs.coins = seed;
-     1000:   35:		testResult = buyCard(5, &gs);
-     1000:   36:		if(testResult == -1)
+     6300:   32:			seed = rand() % 10;
+call    0 returned 100%
+     6300:   33:		}while(seed < 2);
+branch  0 taken 21%
+branch  1 taken 79% (fallthrough)
+     5000:   34:		gs.coins = seed;
+     5000:   35:		testResult = buyCard(5, &gs);
+call    0 returned 100%
+     5000:   36:		if(testResult == -1)
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
         -:   37:		{	
-     1000:   38:			printf("Enough Coins?\n");	
-     1000:   39:			printf("No, we don't have enough to buy, test PASSED\n");
-     1000:   40:			passedCounter++;	
+     5000:   38:			printf("Enough Coins?\n");	
+call    0 returned 100%
+     5000:   39:			printf("No, we don't have enough to buy, test PASSED\n");
+call    0 returned 100%
+     5000:   40:			passedCounter++;	
         -:   41:		}
         -:   42:		else
         -:   43:		{	
     #####:   44:			printf("Enough Coins?\n");
+call    0 never executed
     #####:   45:			printf("Yes, we have enough to buy, test FAILED, \n");
+call    0 never executed
     #####:   46:			failFlag++;
         -:   47:		}
-     1000:   48:		passedSum = passedCounter;
-     1000:   49:		counter++;
-     1000:   50:		printf("Loop Count: %d\n\n",counter);
+     5000:   48:		passedSum = passedCounter;
+     5000:   49:		counter++;
+     5000:   50:		printf("Loop Count: %d\n\n",counter);
+call    0 returned 100%
         -:   51:	}
         -:   52:
-        1:   53:	printf("Total PASSED: %d",passedSum);		
+        5:   53:	printf("Total PASSED: %d",passedSum);		
+call    0 returned 100%
         -:   54:	//PRINT message for test results
-        1:   55:	if(failFlag == 0)
-        1:   56:		printf("\nTEST SUCCESSFULLY COMPLETED\n\n");
+        5:   55:	if(failFlag == 0)
+branch  0 taken 100% (fallthrough)
+branch  1 taken 0%
+        5:   56:		printf("\nTEST SUCCESSFULLY COMPLETED\n\n");
+call    0 returned 100%
         -:   57:	else
     #####:   58:		printf("\nTESTING FAILED\n\n");
+call    0 never executed
         -:   59:	
-        1:   60:	return 0;
+        5:   60:	return 0;
         -:   61:
         -:   62:}
