@@ -1,0 +1,91 @@
+        -:    0:Source:randomtestadventurer.c
+        -:    0:Graph:randomtestadventurer.gcno
+        -:    0:Data:randomtestadventurer.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:
+        -:    2:/*
+        -:    3: *  * 	Random testing for assignment 4.  
+        -:    4: *   * 		This is a card test for the adventure card
+        -:    5: *    * 		*/
+        -:    6:
+        -:    7:#include "dominion.h"
+        -:    8:#include "dominion_helpers.h"
+        -:    9:#include <stdio.h>
+        -:   10:#include <stdlib.h>
+        -:   11:#include <string.h> 
+        -:   12:#include <assert.h>
+        -:   13:
+        -:   14:int assertFlag(int number, int *passFlag);
+        -:   15:
+        1:   16:int main() 
+        -:   17:{
+        1:   18:	int num_of_test = 600;
+        1:   19:	int kc[10] = {adventurer, council_room, feast, embargo, mine, minion, smithy, village, baron, great_hall};
+        1:   20:	int fCount = 0, sCount=0;
+        1:   21:	int players=0, player=0, deckCount, handCount, seed=7, passFlag, lastHandCount, finalEndCard, endCard;
+        -:   22:	struct gameState gs;
+        1:   23:	printf("Now Testing Random Adventurer\n");
+        -:   24:	
+      601:   25:	for (int i = 0; i < num_of_test; i++) 
+        -:   26:	{
+      600:   27:		passFlag = 1;
+        -:   28:		//number of player is 2 to 4
+        -:   29:		do 
+        -:   30:		{
+      973:   31:			players = rand() % 5;
+      973:   32:		} while (players < 2);
+      600:   33:		gs.whoseTurn = player =  players;
+      600:   34:		initializeGame(players, kc, seed, &gs);
+      600:   35:		player = gs.whoseTurn;
+        -:   36:		
+      600:   37:		gs.deckCount[player] = rand() % MAX_DECK; 
+      600:   38:		gs.discardCount[player] = rand() % MAX_DECK;
+      600:   39:		gs.handCount[player] = rand() % MAX_HAND;
+      600:   40:		lastHandCount = handCount = gs.handCount[player];	
+      600:   41:		deckCount = gs.deckCount[player];
+        -:   42:
+      600:   43:		if (gs.handCount[player] <= 100 && gs.handCount[player] > 2) 
+        -:   44:		{
+        -:   45:			//last card				 
+      123:   46:			finalEndCard = gs.hand[player][gs.handCount[player] - 1];
+        -:   47:			////second to last
+      123:   48:			endCard = gs.hand[player][gs.handCount[player] - 2];
+      126:   49:			passFlag = assertFlag(((endCard == gold || endCard == copper || endCard == silver) &&
+        6:   50:			 (finalEndCard == gold || finalEndCard == copper || finalEndCard == silver)),&passFlag);
+        -:   51:		}
+        -:   52:		
+      600:   53:		printf("Test %d of %d: ", i + 1, num_of_test);
+      600:   54:		if (passFlag) 
+        -:   55:		{
+      480:   56:			printf("Test Passed. \n");
+      480:   57:			sCount++;
+        -:   58:		}
+        -:   59:		else 
+        -:   60:		{
+      120:   61:			printf("Test Failed. \n");
+      120:   62:			fCount++;
+        -:   63:		}
+        -:   64:
+        -:   65:	}
+        -:   66:
+        1:   67:	int sumSuccess = sCount;
+        1:   68:	int sumFailure = fCount;
+        1:   69:	printf("\nTotal Sucess:   %d\n",sCount);
+        1:   70:	printf("Total Fails:  %d\n",fCount);
+        1:   71:	printf("Tests Complete\n");
+        1:   72:	return 0;
+        -:   73:
+        -:   74:}
+        -:   75:
+      123:   76:int assertFlag(int number, int *passFlag) 
+        -:   77:{
+      123:   78:	if (!number) 
+        -:   79:	{
+      120:   80:		*passFlag = 0;
+      240:   81:		return 0;
+        -:   82:	}
+        -:   83:	
+        3:   84:}
+        -:   85:
+        -:   86:

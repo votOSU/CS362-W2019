@@ -654,7 +654,7 @@ int playAdventurer(struct gameState *state, int currentPlayer, int handPos){
     }
     drawCard(currentPlayer, state);
     cardDrawn = state->hand[currentPlayer][state->handCount[currentPlayer]-1];//top card of hand is most recently drawn card.
-    if (cardDrawn == copper || cardDrawn == silver)
+    if (cardDrawn == copper || cardDrawn == silver || cardDrawn == gold ) //adding back the missing condition(gold) that Ken omitted
       drawntreasure++;
     else{
       temphand[z]=cardDrawn;
@@ -674,7 +674,7 @@ int playSmithy(struct gameState *state, int currentPlayer, int handPos){
   //+3 Cards
   int i;
   for (i = 0; i < 3; i++){
-    i=0;
+    //i=0;  Ken's bug, Fixing it by comment it out
 	  drawCard(currentPlayer, state);
 	}
 			
@@ -750,7 +750,10 @@ int playCouncilRoom(struct gameState *state, int currentPlayer, int handPos){
   
   //Each other player draws a card
   for (i = 0; i < state->numPlayers; i++){
-    drawCard(i, state);
+	if( i != currentPlayer) //adding back the if statement that Ken ommitted 
+	{
+    		drawCard(i, state);
+	}
   }
   
   //put played card in played card pile
